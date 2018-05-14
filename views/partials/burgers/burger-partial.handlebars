@@ -1,0 +1,23 @@
+<br>
+<div class="burgerClass">
+
+
+    {{burger_name}}
+    {{#if devoured}} 
+        ( Eaten by {{customer_sequelize.customer_name}} ) 
+    {{else}}
+        
+        
+
+            <input type="text" class="customerName" name="name" onfocus="this.value=''" value="customer?">
+        
+
+            <button class="change-devour" data-id="{{id}}" data-newdevour="{{devoured}}">
+                Fresh
+            </button>
+
+        
+        
+    {{/if}}
+
+</div>

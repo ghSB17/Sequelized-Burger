@@ -1,0 +1,45 @@
+<div class="jumbotron text-center h1">Eat-the-Sequelized-Burgers</div>
+
+<div class="container">
+
+    <div class="row">
+       
+        <div class="col-7">    
+            Not Devoured 
+            {{#each burgers}} 
+            
+                {{#unless devoured}} 
+                    {{> burgers/burger-partial this}}
+                {{/unless}}
+               
+            {{/each}}
+        </div>
+
+    <div class = "col-1"></div>
+
+        <div class="col-4">
+            Devoured
+            {{#each burgers}} 
+               
+                {{#if devoured}} 
+                    {{> burgers/burger-partial this}}
+                {{/if}}
+              
+            {{/each}}
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+  <h2>Add a Burger</h2>
+  <form class="create-form">
+
+    <div class="form-group">
+      Burger Name:
+      <input type="text" id="burgerName" onfocus="this.value=''" value="burger?" name="name">
+    </div>
+
+    <button type="submit">Add Burger</button>
+  </form>
+</div>
